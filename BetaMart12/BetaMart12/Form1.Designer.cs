@@ -32,36 +32,37 @@ namespace BetaMart12
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.txtNama = new System.Windows.Forms.TextBox();
-            this.txtJenis = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtDeskripsi = new System.Windows.Forms.TextBox();
+            this.barangBetaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mydbDataSet = new BetaMart12.mydbDataSet();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtTanggal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDeskripsi = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtJenis = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNama = new System.Windows.Forms.TextBox();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.mydbDataSet = new BetaMart12.mydbDataSet();
-            this.barangBetaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.barangBetaTableAdapter = new BetaMart12.mydbDataSetTableAdapters.BarangBetaTableAdapter();
             this.barangIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namaBarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.jenisBarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deskripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.barangBetaTableAdapter = new BetaMart12.mydbDataSetTableAdapters.BarangBetaTableAdapter();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barangBetaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barangBetaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,51 +92,33 @@ namespace BetaMart12
             this.panel.Size = new System.Drawing.Size(785, 213);
             this.panel.TabIndex = 0;
             // 
-            // pictureBox
+            // txtDeskripsi
             // 
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.barangBetaBindingSource, "Image", true));
-            this.pictureBox.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(111, 137);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
+            this.txtDeskripsi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.barangBetaBindingSource, "Deskripsi", true));
+            this.txtDeskripsi.Location = new System.Drawing.Point(215, 89);
+            this.txtDeskripsi.Multiline = true;
+            this.txtDeskripsi.Name = "txtDeskripsi";
+            this.txtDeskripsi.Size = new System.Drawing.Size(553, 112);
+            this.txtDeskripsi.TabIndex = 3;
             // 
-            // btnBrowse
+            // barangBetaBindingSource
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(23, 147);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowse.TabIndex = 1;
-            this.btnBrowse.Text = "Browse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.barangBetaBindingSource.DataMember = "BarangBeta";
+            this.barangBetaBindingSource.DataSource = this.mydbDataSet;
             // 
-            // txtNama
+            // mydbDataSet
             // 
-            this.txtNama.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.barangBetaBindingSource, "NamaBarang", true));
-            this.txtNama.Location = new System.Drawing.Point(215, 11);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(399, 20);
-            this.txtNama.TabIndex = 0;
+            this.mydbDataSet.DataSetName = "mydbDataSet";
+            this.mydbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtJenis
+            // label4
             // 
-            this.txtJenis.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.barangBetaBindingSource, "JenisBarang", true));
-            this.txtJenis.Location = new System.Drawing.Point(215, 37);
-            this.txtJenis.Name = "txtJenis";
-            this.txtJenis.Size = new System.Drawing.Size(399, 20);
-            this.txtJenis.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(134, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Jenis Barang:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(134, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Deskripsi :";
             // 
             // txtTanggal
             // 
@@ -154,23 +137,51 @@ namespace BetaMart12
             this.label3.TabIndex = 6;
             this.label3.Text = "Tanggal:";
             // 
-            // txtDeskripsi
+            // txtJenis
             // 
-            this.txtDeskripsi.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.barangBetaBindingSource, "Deskripsi", true));
-            this.txtDeskripsi.Location = new System.Drawing.Point(215, 89);
-            this.txtDeskripsi.Multiline = true;
-            this.txtDeskripsi.Name = "txtDeskripsi";
-            this.txtDeskripsi.Size = new System.Drawing.Size(553, 112);
-            this.txtDeskripsi.TabIndex = 3;
+            this.txtJenis.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.barangBetaBindingSource, "JenisBarang", true));
+            this.txtJenis.Location = new System.Drawing.Point(215, 37);
+            this.txtJenis.Name = "txtJenis";
+            this.txtJenis.Size = new System.Drawing.Size(399, 20);
+            this.txtJenis.TabIndex = 1;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(134, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Deskripsi :";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(134, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Jenis Barang:";
+            // 
+            // txtNama
+            // 
+            this.txtNama.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.barangBetaBindingSource, "NamaBarang", true));
+            this.txtNama.Location = new System.Drawing.Point(215, 11);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(399, 20);
+            this.txtNama.TabIndex = 0;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(23, 147);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 1;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.barangBetaBindingSource, "Image", true));
+            this.pictureBox.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(111, 137);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
             // txtSearch
             // 
@@ -206,60 +217,6 @@ namespace BetaMart12
             this.dataGridView1.Size = new System.Drawing.Size(785, 209);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(723, 473);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(642, 473);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(561, 473);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 3;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(480, 473);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 2;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // mydbDataSet
-            // 
-            this.mydbDataSet.DataSetName = "mydbDataSet";
-            this.mydbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // barangBetaBindingSource
-            // 
-            this.barangBetaBindingSource.DataMember = "BarangBeta";
-            this.barangBetaBindingSource.DataSource = this.mydbDataSet;
-            // 
-            // barangBetaTableAdapter
-            // 
-            this.barangBetaTableAdapter.ClearBeforeFill = true;
             // 
             // barangIDDataGridViewTextBoxColumn
             // 
@@ -301,11 +258,66 @@ namespace BetaMart12
             this.imageDataGridViewImageColumn.HeaderText = "Image";
             this.imageDataGridViewImageColumn.Name = "imageDataGridViewImageColumn";
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(723, 473);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(642, 473);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(561, 473);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(480, 473);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 2;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // barangBetaTableAdapter
+            // 
+            this.barangBetaTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(18, 477);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 512);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnCancel);
@@ -320,10 +332,10 @@ namespace BetaMart12
             this.Load += new System.EventHandler(this.Form_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barangBetaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mydbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barangBetaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,6 +370,7 @@ namespace BetaMart12
         private System.Windows.Forms.DataGridViewTextBoxColumn tanggalDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deskripsiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn imageDataGridViewImageColumn;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

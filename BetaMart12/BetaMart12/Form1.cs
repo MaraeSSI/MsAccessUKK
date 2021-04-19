@@ -113,5 +113,19 @@ namespace BetaMart12
             barangBetaBindingSource.DataSource = this.mydbDataSet.BarangBeta;
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Hapus record ?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    barangBetaBindingSource.RemoveCurrent();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                barangBetaBindingSource.ResetBindings(false);
+            }
+        }
     }
 }
